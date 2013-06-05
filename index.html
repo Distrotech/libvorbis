@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Libvorbis by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Libvorbis</h1>
+          <h2>Mirror of git://git.xiph.org/mirrors/vorbis.git</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/libvorbis/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/libvorbis/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/libvorbis" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <hr><ul>
+<li>                                                                 *</li>
+<li>THIS FILE IS PART OF THE OggVorbis SOFTWARE CODEC SOURCE CODE.   *</li>
+<li>USE, DISTRIBUTION AND REPRODUCTION OF THIS LIBRARY SOURCE IS     *</li>
+<li>GOVERNED BY A BSD-STYLE SOURCE LICENSE INCLUDED WITH THIS SOURCE *</li>
+<li>IN 'COPYING'. PLEASE READ THESE TERMS BEFORE DISTRIBUTING.       *</li>
+<li>                                                                 *</li>
+<li>THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2007             *</li>
+<li>by the Xiph.org Foundation, <a href="http://www.xiph.org/">http://www.xiph.org/</a>                 *</li>
+<li>                                                                 *
+********************************************************************</li>
+</ul><p>Vorbis is a general purpose audio and music encoding format
+contemporary to MPEG-4's AAC and TwinVQ, the next generation beyond
+MPEG audio layer 3. Unlike the MPEG sponsored formats (and other
+proprietary formats such as RealAudio G2 and Windows' flavor of the
+month), the Vorbis CODEC specification belongs to the public domain.
+All the technical details are published and documented, and any
+software entity may make full use of the format without license 
+fee, royalty or patent concerns.</p>
+
+<p>This package contains:</p>
+
+<ul>
+<li><p>libvorbis, a BSD-style license software implementation of
+the Vorbis specification by the Xiph.Org Foundation 
+(<a href="http://www.xiph.org/">http://www.xiph.org/</a>) </p></li>
+<li><p>libvorbisfile, a BSD-style license convenience library
+built on Vorbis designed to simplify common uses</p></li>
+<li><p>libvorbisenc, a BSD-style license library that provides a simple,
+programmatic encoding setup interface </p></li>
+<li><p>example code making use of libogg, libvorbis, libvorbisfile and
+libvorbisenc</p></li>
+</ul><p>WHAT'S HERE:</p>
+
+<p>This source distribution includes libvorbis and an example
+encoder/player to demonstrate use of libvorbis as well as
+documentation on the Ogg Vorbis audio coding format.</p>
+
+<p>You'll need libogg (distributed separately) to compile this library.
+A more comprehensive set of utilities is available in the vorbis-tools
+package.</p>
+
+<p>Directory:</p>
+
+<p>./lib       The source for the libraries, a BSD-license implementation
+        of the public domain Ogg Vorbis audio encoding format.</p>
+
+<p>./include       Library API headers</p>
+
+<p>./debian        Rules/spec files for building Debian .deb packages</p>
+
+<p>./doc           Vorbis documentation</p>
+
+<p>./examples  Example code illustrating programmatic use of libvorbis, 
+        libvorbisfile and libvorbisenc</p>
+
+<p>./mac       Codewarrior project files and build tweaks for MacOS.</p>
+
+<p>./macosx    Project files for MacOS X.</p>
+
+<p>./win32     Win32 projects files and build automation</p>
+
+<p>./vq        Internal utilities for training/building new LSP/residue 
+        and auxiliary codebooks.</p>
+
+<p>CONTACT:</p>
+
+<p>The Ogg homepage is located at '<a href="http://www.xiph.org/ogg/">http://www.xiph.org/ogg/</a>'.
+Vorbis's homepage is located at '<a href="http://www.xiph.org/vorbis/">http://www.xiph.org/vorbis/</a>'.
+Up to date technical documents, contact information, source code and
+pre-built utilities may be found there.</p>
+
+<p>The user website for Ogg Vorbis software and audio is <a href="http://vorbis.com/">http://vorbis.com/</a></p>
+
+<p>BUILDING FROM TRUNK:</p>
+
+<p>Development source is under subversion revision control at 
+<a href="https://svn.xiph.org/trunk/vorbis/">https://svn.xiph.org/trunk/vorbis/</a>. You will also need the 
+newest versions of autoconf, automake, libtool and pkg-config in
+order to compile Vorbis from development source. A configure script
+is provided for you in the source tarball distributions.</p>
+
+<p>[update or checkout latest source]
+  ./autogen.sh
+  make</p>
+
+<p>and as root if desired:</p>
+
+<p>make install</p>
+
+<p>This will install the Vorbis libraries (static and shared) into
+/usr/local/lib, includes into /usr/local/include and API manpages
+(once we write some) into /usr/local/man.</p>
+
+<p>Documentation building requires xsltproc and pdfxmltex.</p>
+
+<p>BUILDING FROM TARBALL DISTRIBUTIONS:</p>
+
+<p>./configure
+  make</p>
+
+<p>and optionally (as root):
+  make install</p>
+
+<p>BUILDING RPMS:</p>
+
+<p>after normal configuring:</p>
+
+<p>make dist
+  rpm -ta libvorbis-.tar.gz</p>
+
+<p>BUILDING ON MACOS 9:</p>
+
+<p>Vorbis on MacOS 9 is built using Metroworks CodeWarrior.  To build it, 
+first verify that the Ogg libraries are already built following the
+instructions in the Ogg module README.  Open vorbis/mac/libvorbis.mcp,
+switch to the "Targets" pane, select everything, and make the project.
+Do the same thing to build libvorbisenc.mcp, and libvorbisfile.mcp (in
+that order).  In vorbis/mac/Output you will now have both debug and final
+versions of Vorbis shared libraries to link your projects against.</p>
+
+<p>To build a project using Ogg Vorbis, add access paths to your
+CodeWarrior project for the ogg/include, ogg/mac/Output,
+vorbis/include, and vorbis/mac/Output folders.  Be sure that
+"interpret DOS and Unix paths" is turned on in your project; it can
+be found in the "access paths" pane in your project settings.  Now
+simply add the shared libraries you need to your project (OggLib and
+VorbisLib at least) and #include "ogg/ogg.h" and "vorbis/codec.h"
+wherever you need to access Ogg and Vorbis functionality.</p>
+        </section>
+
+        <footer>
+          Libvorbis is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
